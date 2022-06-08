@@ -4,37 +4,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import {remark} from 'remark';
 import html from 'remark-html';
+import {getTags} from '../utils/tags';
 
 // post directory
 const postsDirectory = path.join(process.cwd(), "pages/posts");
-
-/**
- * @param a string of tags in format "hello,world,this,is,another,tag"
- * @returns an array of tags
- */
-
-function getTags(tagsStr){
-    var tagsArr = [];
-    var tag = '';
-    var indexComma = 0;
-    var hasNextTag = true;
-
-    while(hasNextTag){
-        // find endpoint of this tag
-        indexComma = tagsStr.indexOf(",") == -1 ? tagsStr.length : tagsStr.indexOf(','); 
-
-        // determine if there is another tag left
-        if (tagsStr.substring(indexComma + 1).trim().length == 0) hasNextTag = false;
-
-        // extract the tag
-        tag = tagsStr.substring(0, indexComma).trim();
-        tagsStr = tagsStr.substring(indexComma + 1);
-
-        tagsArr.push(tag);
-    }
-
-    return tagsArr;
-}
 
 // get post data & sort. used to preview blogposts on home page
 export function getSortedPostData(){
