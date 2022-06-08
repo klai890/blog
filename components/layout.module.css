@@ -1,0 +1,23 @@
+/** layout.module.css
+  * Styles for basic layouts. Contains styles like .container, which sets a default spacing,
+  * .header, which sets a default header, and .backToHome, which is a styling for a link
+  **/
+
+  /* Default spacing */
+  .container {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+  
+  /* Default header, center, contains items inside */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Specific link styling */
+  .backToHome {
+    margin: 3rem 0 0;
+  }

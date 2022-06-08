@@ -1,0 +1,15 @@
+/* container for holding paragraph tags */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* paragraph tag style */
+.tag{
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 0 0;
+    background: rgb(234, 233, 233);
+    border-radius: 3rem;
+}
+
+  
