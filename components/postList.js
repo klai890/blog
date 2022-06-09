@@ -8,13 +8,18 @@ import {useState} from 'react';
 
 export default function PostList({tags, allPostsData}){
 
-    // updating state using tags!
+    // updating posts render list using tags!
 
-    const [posts, setPosts] = useState(allPostsData);
+    const [posts, setPosts] = useState( allPostsData );
 
+    // filters all the posts
     function handleClick(tag){
         var filteredPosts = filterTags(tag, allPostsData);
         setPosts(filteredPosts);
+    }
+
+    function resetPosts(){
+        setPosts(allPostsData);
     }
 
     function randNum(){
@@ -28,10 +33,14 @@ export default function PostList({tags, allPostsData}){
                 <h2 className={utilStyles.headingLg}>Tags</h2>
 
                  <div className={`${utilStyles.lightText} ${styles.container}`}>
+                        <button key={randNum()} className={styles.tag} onClick={() => resetPosts()}>
+                            All Posts
+                        </button>
+
                     {tags.map( tag => (
                         // need a key when using for-loop to generate items
                         <button key={randNum()} className={styles.tag} onClick={() => handleClick(tag)}>
-                            <a>{tag}</a>
+                            {tag}
                         </button>
                     ))}
                 </div>
@@ -45,21 +54,20 @@ export default function PostList({tags, allPostsData}){
             {/* list */}
             <ul className={utilStyles.list}>
             {posts == null ? null : posts.map( ({id, date, title}) => (
+                // need a key when using for-loop to generate items
+                <li className={utilStyles.listItem} key={id}>
 
-            // need a key when using for-loop to generate items
-            <li className={utilStyles.listItem} key={id}>
+                    {/* link to post */}
+                    <Link href={`/posts/${id}`}>
+                        <a>{title}</a>
+                    </Link>
 
-                {/* link to post */}
-                <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-                </Link>
+                    {/* date of post */}
+                    <div className={utilStyles.lightText}>
+                    <Date dateString={date} />
+                    </div>
 
-                {/* date of post */}
-                <div className={utilStyles.lightText}>
-                <Date dateString={date} />
-                </div>
-
-            </li>
+                </li>
             ))}
         </ul>
       </>

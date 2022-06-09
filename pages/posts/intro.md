@@ -1,7 +1,7 @@
 ---
 title: 'First post!'
 date: '2022-06-06'
-tags: 'about me, web dev, ai, next.js'
+tags: 'about me'
 ---
 Hi, I'm Karena, a rising high school senior! I'm interested in web development and artificial intelligence, and this is my blog. In this blog, plan on writing about the aforementioned topics.
 
