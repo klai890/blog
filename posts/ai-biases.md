@@ -4,7 +4,7 @@ date: '2022-06-18'
 tags: 'ai, old'
 ---
 
-I wrote this article for the [Youth for Ethical Tech](https://youth4ethicaltech.wixsite.com/official) on July 26th, 2020, and published it on Medium. I have since then taken down the article on Medium, and I am reposting it here. 
+I wrote this article for the [Youth for Ethical Tech](https://www.instagram.com/p/CDKUKijDm1I/?utm_source=ig_web_button_share_sheet) on July 26th, 2020, and published it on Medium. I have since then taken down the article on Medium, and I am reposting it here. 
 
 ### Clarifying Definitions
 
