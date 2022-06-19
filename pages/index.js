@@ -26,8 +26,8 @@ export default function Home({allPostsData}) {
       
       <section className={utilStyles.headingMd}>
         <p>
-          Hi! I will be using this blog to write about web development and artificial intelligence. It will
-          be mostly notes on things I'm learning and doing.
+          {/* Description */}
+          Writing mostly about tech and ethics.
         </p>
       </section>
 

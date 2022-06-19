@@ -6,7 +6,7 @@ import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-export const name = 'Goose\'s Blog';
+export const name = 'Goose Blog';
 export const siteTitle = 'blog';
 
 export default function Layout({children, home}){
