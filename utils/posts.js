@@ -7,7 +7,7 @@ import html from 'remark-html';
 import {getTags} from '../utils/tags';
 
 // post directory
-const postsDirectory = path.join(process.cwd(), "pages/posts");
+const postsDirectory = path.join(process.cwd(), 'posts')
 
 // get post data & sort. used to preview blogposts on home page
 export function getSortedPostData(){
